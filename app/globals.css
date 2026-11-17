@@ -18,7 +18,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 font-medium transition-all duration-base rounded-md disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 rounded-md disabled:opacity-50 disabled:pointer-events-none;
   }
   .btn-primary {
     @apply btn bg-accent text-on-accent hover:bg-accent-hover;
