@@ -1,0 +1,35 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-bg text-text antialiased;
+  }
+  body {
+    @apply min-h-screen font-sans;
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium transition-all duration-base rounded-md disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-on-accent hover:bg-accent-hover;
+  }
+  .btn-secondary {
+    @apply btn bg-surface border border-border text-text hover:bg-surface-hover;
+  }
+  .btn-ghost {
+    @apply btn text-text-muted hover:text-text hover:bg-surface-hover;
+  }
+  .btn-sm { @apply h-8 px-3 text-sm; }
+  .btn-md { @apply h-10 px-4 text-base; }
+  .btn-lg { @apply h-12 px-5 text-md; }
+}
